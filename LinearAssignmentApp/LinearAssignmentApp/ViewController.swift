@@ -16,6 +16,8 @@ class ViewController : NSViewController
     var calculatedArray: [[Int]]!
     var res: Dictionary<String, String> = [:]
     @objc var resultArray: NSMutableArray = []
+    let numberStyle: NumberFormatter = NumberFormatter.init()
+    
     
     @IBOutlet var m_resController: NSArrayController!
     
@@ -32,6 +34,15 @@ class ViewController : NSViewController
     override func viewDidLoad()
     {
         self.m_resController.content = self.resultArray
+        self.r0c0.formatter = numberStyle
+        self.r0c1.formatter = numberStyle
+        self.r0c2.formatter = numberStyle
+        self.r1c0.formatter = numberStyle
+        self.r1c1.formatter = numberStyle
+        self.r1c2.formatter = numberStyle
+        self.r2c0.formatter = numberStyle
+        self.r2c1.formatter = numberStyle
+        self.r2c2.formatter = numberStyle
     }
 
     @IBAction func calculateBtnTapped(_ sender: AnyObject?)
