@@ -688,8 +688,9 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="800" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="800" height="270"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -707,13 +708,13 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="LinearAssignmentApp" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="754" height="358"/>
+                        <rect key="frame" x="0.0" y="0.0" width="725" height="290"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jPI-lT-gZH">
-                                <rect key="frame" x="-6" y="-7" width="766" height="51"/>
+                                <rect key="frame" x="-6" y="-7" width="737" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ChS-3B-2Wh"/>
+                                    <constraint firstAttribute="height" constant="40" id="Wk7-5e-NUg"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Calculate!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9qG-Xt-d6P">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -723,116 +724,107 @@
                                     </connections>
                                 </buttonCell>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YgA-y3-FMu">
-                                <rect key="frame" x="644" y="195" width="90" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7Ye-e1-6SS"/>
-                                    <constraint firstAttribute="width" constant="90" id="Xgq-iv-0a3"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="oTi-0b-X1g">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lTe-YD-EZb">
+                                <rect key="frame" x="337" y="134" width="100" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="rdg-zo-lzU">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="XZI-5C-HBH">
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mGT-RX-dBH">
-                                <rect key="frame" x="539" y="195" width="90" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="YIt-2L-Hs6"/>
-                                    <constraint firstAttribute="height" constant="40" id="Z19-8k-Ueg"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="OjN-67-v45">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nxK-Hf-Fuw">
+                                <rect key="frame" x="337" y="92" width="100" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Mhd-eV-Pgq">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="UiC-NW-yRB">
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7A6-Py-leO">
-                                <rect key="frame" x="434" y="195" width="90" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="FfS-4z-Of4"/>
-                                    <constraint firstAttribute="width" constant="90" id="Yfg-la-jTH"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="QGt-Ip-cJa">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V5S-uH-D18">
+                                <rect key="frame" x="457" y="176" width="100" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Jmh-0q-KxY">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="cty-Rj-bvY">
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w0k-9O-GEQ">
-                                <rect key="frame" x="434" y="140" width="90" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="AXj-ln-MeR"/>
-                                    <constraint firstAttribute="height" constant="40" id="jKg-8N-24D"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="x0T-5k-tKw">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6zg-02-Ied">
+                                <rect key="frame" x="457" y="134" width="100" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="O5J-hB-90f">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="I19-5b-2tG">
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-Nn-DMD">
-                                <rect key="frame" x="539" y="90" width="90" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="1Vx-op-uNU"/>
-                                    <constraint firstAttribute="height" constant="40" id="nMs-XM-oAp"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="yBv-gV-Cnb">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="knd-48-fkK">
+                                <rect key="frame" x="457" y="92" width="100" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="fIS-Lp-GPi">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="UCG-0G-FTr">
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d59-N9-L6v">
-                                <rect key="frame" x="644" y="90" width="90" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="RfG-bW-N9g"/>
-                                    <constraint firstAttribute="height" constant="40" id="Rl2-jq-07e"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="tdz-V5-7d8">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kfo-Y8-BT1">
+                                <rect key="frame" x="577" y="176" width="100" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="37v-bV-DQS">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="u4R-qy-dtI">
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ryA-36-f15">
-                                <rect key="frame" x="644" y="140" width="90" height="40"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JRB-4v-uuN">
+                                <rect key="frame" x="577" y="134" width="100" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="Fmk-qt-b3Z"/>
-                                    <constraint firstAttribute="height" constant="40" id="sKP-Rt-3lP"/>
+                                    <constraint firstAttribute="width" constant="100" id="eJH-N3-TNy"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="wrB-aZ-uUT">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="PkW-cY-OLp">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="G5r-09-tbq">
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8vh-95-kzD">
-                                <rect key="frame" x="539" y="140" width="90" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="7WZ-R0-kEX"/>
-                                    <constraint firstAttribute="height" constant="40" id="D0k-QN-OCF"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Fkp-gg-255">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sbs-Za-f2J">
-                                <rect key="frame" x="434" y="90" width="90" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="2oB-sp-FKr"/>
-                                    <constraint firstAttribute="height" constant="40" id="kFg-vz-rgq"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Eag-E9-yNY">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-KB-yEh">
+                                <rect key="frame" x="577" y="92" width="100" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="WiF-mL-Hyy">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="YFm-B8-5av">
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QhZ-Ye-49g">
-                                <rect key="frame" x="28" y="268" width="46" height="17"/>
+                                <rect key="frame" x="30" y="228" width="46" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Result:" id="Wff-zZ-mIF">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -840,21 +832,21 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MTv-q1-5FF">
-                                <rect key="frame" x="432" y="243" width="211" height="17"/>
+                                <rect key="frame" x="335" y="207" width="211" height="18"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Please, enter the costs, as Integer" id="VDu-as-LyG">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbk-65-2z3">
-                                <rect key="frame" x="30" y="91" width="359" height="176"/>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbk-65-2z3">
+                                <rect key="frame" x="32" y="65" width="293" height="160"/>
                                 <clipView key="contentView" id="fkm-Lu-009">
-                                    <rect key="frame" x="1" y="0.0" width="357" height="175"/>
+                                    <rect key="frame" x="1" y="0.0" width="291" height="159"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="a3l-zK-HS6" viewBased="YES" id="WNu-pk-zXP" userLabel="Workers Table View">
-                                            <rect key="frame" x="0.0" y="0.0" width="357" height="152"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="291" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -946,7 +938,7 @@
                                                         <binding destination="t9m-Rh-caL" name="value" keyPath="arrangedObjects.worker2" id="hSR-mR-neS"/>
                                                     </connections>
                                                 </tableColumn>
-                                                <tableColumn width="148" minWidth="10" maxWidth="3.4028234663852886e+38" id="K1d-oq-QLA">
+                                                <tableColumn width="82" minWidth="10" maxWidth="3.4028234663852886e+38" id="K1d-oq-QLA">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Worker3">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -960,11 +952,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="mbM-2w-0hX">
-                                                            <rect key="frame" x="207" y="1" width="148" height="17"/>
+                                                            <rect key="frame" x="207" y="1" width="82" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ikz-Ee-5zb" userLabel="Worker3 TextField">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="LVu-bd-Lc1">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -997,7 +989,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="eb8-xn-qZk">
-                                    <rect key="frame" x="1" y="159" width="190" height="16"/>
+                                    <rect key="frame" x="1" y="143" width="58" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="CFk-mh-tCy">
@@ -1005,91 +997,96 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="a3l-zK-HS6">
-                                    <rect key="frame" x="0.0" y="0.0" width="357" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="291" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g59-SQ-5w6">
+                                <rect key="frame" x="337" y="176" width="100" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0Zw-kt-8zJ">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="WuV-eA-xrt">
+                                        <real key="minimum" value="0.0"/>
+                                        <real key="maximum" value="100"/>
+                                    </numberFormatter>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="sbs-Za-f2J" firstAttribute="top" secondItem="w0k-9O-GEQ" secondAttribute="bottom" constant="10" id="0zk-nP-wXT"/>
-                            <constraint firstItem="8vh-95-kzD" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="27g-kM-Ici"/>
-                            <constraint firstItem="sbs-Za-f2J" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="3Vy-wi-VJA"/>
-                            <constraint firstItem="ryA-36-f15" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="4PV-hx-AGe"/>
-                            <constraint firstItem="mGT-RX-dBH" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="4mO-Vn-suA"/>
-                            <constraint firstItem="YgA-y3-FMu" firstAttribute="leading" secondItem="mGT-RX-dBH" secondAttribute="trailing" constant="15" id="4pn-3b-ACM"/>
-                            <constraint firstItem="sbs-Za-f2J" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="64t-df-XUi"/>
-                            <constraint firstItem="xaG-Nn-DMD" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="6c5-b7-PrJ"/>
-                            <constraint firstItem="sbs-Za-f2J" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="7hl-WQ-qGM"/>
-                            <constraint firstItem="d59-N9-L6v" firstAttribute="leading" secondItem="xaG-Nn-DMD" secondAttribute="trailing" constant="15" id="8eg-bh-tKr"/>
-                            <constraint firstItem="YgA-y3-FMu" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="Asb-dR-uVt"/>
-                            <constraint firstAttribute="trailing" secondItem="jPI-lT-gZH" secondAttribute="trailing" id="BKt-K7-wTL"/>
-                            <constraint firstItem="YgA-y3-FMu" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="Eg4-Us-xRp"/>
-                            <constraint firstItem="d59-N9-L6v" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="F2x-hB-Yau"/>
-                            <constraint firstItem="xaG-Nn-DMD" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="FoP-0g-9zk"/>
-                            <constraint firstItem="mGT-RX-dBH" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="123" id="GY8-7N-QP1"/>
-                            <constraint firstItem="8vh-95-kzD" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="GoA-xf-XKY"/>
-                            <constraint firstItem="w0k-9O-GEQ" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="GoC-rC-h6h"/>
-                            <constraint firstItem="Mbk-65-2z3" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="89" id="Hfn-fm-2Rx"/>
-                            <constraint firstAttribute="trailing" secondItem="MTv-q1-5FF" secondAttribute="trailing" constant="113" id="Hml-cv-in4"/>
-                            <constraint firstItem="xaG-Nn-DMD" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="L7l-6h-asb"/>
-                            <constraint firstAttribute="trailing" secondItem="Mbk-65-2z3" secondAttribute="trailing" constant="365" id="L9i-s4-I12"/>
-                            <constraint firstItem="7A6-Py-leO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="123" id="Pbf-EM-mcM"/>
-                            <constraint firstItem="w0k-9O-GEQ" firstAttribute="top" secondItem="7A6-Py-leO" secondAttribute="bottom" constant="15" id="QXa-S1-9ze"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QhZ-Ye-49g" secondAttribute="trailing" constant="20" symbolic="YES" id="QZc-AO-DUg"/>
-                            <constraint firstItem="w0k-9O-GEQ" firstAttribute="leading" secondItem="7A6-Py-leO" secondAttribute="leading" id="UtT-eg-Ghq"/>
-                            <constraint firstItem="mGT-RX-dBH" firstAttribute="leading" secondItem="7A6-Py-leO" secondAttribute="trailing" constant="15" id="Uzz-ye-fnS"/>
-                            <constraint firstItem="jPI-lT-gZH" firstAttribute="top" secondItem="Mbk-65-2z3" secondAttribute="bottom" constant="53" id="WdM-dg-luF"/>
-                            <constraint firstItem="YgA-y3-FMu" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="Wsg-tC-P9d"/>
-                            <constraint firstItem="jPI-lT-gZH" firstAttribute="top" secondItem="sbs-Za-f2J" secondAttribute="bottom" constant="50" id="ZA6-8d-A4z"/>
-                            <constraint firstItem="7A6-Py-leO" firstAttribute="leading" secondItem="Mbk-65-2z3" secondAttribute="trailing" constant="45" id="ZSk-rS-YWS"/>
-                            <constraint firstItem="8vh-95-kzD" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="ZaV-uK-jR4"/>
-                            <constraint firstItem="xaG-Nn-DMD" firstAttribute="top" secondItem="8vh-95-kzD" secondAttribute="bottom" constant="10" id="ZrA-8F-ZeK"/>
-                            <constraint firstItem="YgA-y3-FMu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="123" id="bEx-yp-fPI"/>
-                            <constraint firstItem="w0k-9O-GEQ" firstAttribute="leading" secondItem="sbs-Za-f2J" secondAttribute="leading" id="boF-NJ-5K2"/>
-                            <constraint firstItem="w0k-9O-GEQ" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="bth-M0-xOC"/>
-                            <constraint firstItem="mGT-RX-dBH" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="buV-9z-tb3"/>
-                            <constraint firstItem="ryA-36-f15" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="cWo-kn-Mve"/>
-                            <constraint firstItem="QhZ-Ye-49g" firstAttribute="leading" secondItem="Mbk-65-2z3" secondAttribute="leading" id="eLe-A8-ldT"/>
-                            <constraint firstItem="mGT-RX-dBH" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="eLe-eV-TLF"/>
-                            <constraint firstItem="8vh-95-kzD" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="fyD-UI-edb"/>
-                            <constraint firstItem="d59-N9-L6v" firstAttribute="top" secondItem="ryA-36-f15" secondAttribute="bottom" constant="10" id="gNt-fr-qCO"/>
-                            <constraint firstItem="8vh-95-kzD" firstAttribute="leading" secondItem="w0k-9O-GEQ" secondAttribute="trailing" constant="15" id="gdO-XG-t8O"/>
-                            <constraint firstItem="jPI-lT-gZH" firstAttribute="top" secondItem="xaG-Nn-DMD" secondAttribute="bottom" constant="50" id="hQA-eI-4Wv"/>
-                            <constraint firstItem="d59-N9-L6v" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="iyC-dg-Rvv"/>
-                            <constraint firstItem="xaG-Nn-DMD" firstAttribute="leading" secondItem="sbs-Za-f2J" secondAttribute="trailing" constant="15" id="kM3-ie-M0j"/>
-                            <constraint firstItem="xaG-Nn-DMD" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="lDO-CS-p40"/>
-                            <constraint firstItem="Mbk-65-2z3" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="30" id="mAt-4k-M1g"/>
-                            <constraint firstItem="d59-N9-L6v" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="mso-Ay-G7e"/>
-                            <constraint firstItem="d59-N9-L6v" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="ndK-GA-eWQ"/>
-                            <constraint firstItem="w0k-9O-GEQ" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="oHg-A6-61j"/>
-                            <constraint firstItem="ryA-36-f15" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="oL6-65-45Z"/>
-                            <constraint firstItem="ryA-36-f15" firstAttribute="top" secondItem="YgA-y3-FMu" secondAttribute="bottom" constant="15" id="pfI-QF-Fjx"/>
-                            <constraint firstItem="YgA-y3-FMu" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="pt3-2d-S61"/>
-                            <constraint firstItem="QhZ-Ye-49g" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="73" id="raV-R4-50K"/>
-                            <constraint firstItem="jPI-lT-gZH" firstAttribute="top" secondItem="d59-N9-L6v" secondAttribute="bottom" constant="50" id="sb7-ee-8BT"/>
-                            <constraint firstItem="mGT-RX-dBH" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="tOQ-RJ-nEU"/>
-                            <constraint firstItem="jPI-lT-gZH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="u6M-6S-mt4"/>
-                            <constraint firstItem="sbs-Za-f2J" firstAttribute="width" secondItem="7A6-Py-leO" secondAttribute="width" id="vGL-TW-m7r"/>
-                            <constraint firstItem="8vh-95-kzD" firstAttribute="top" secondItem="mGT-RX-dBH" secondAttribute="bottom" constant="15" id="vIK-Ok-3eq"/>
-                            <constraint firstItem="7A6-Py-leO" firstAttribute="top" secondItem="MTv-q1-5FF" secondAttribute="bottom" constant="8" symbolic="YES" id="x9F-W7-EwS"/>
-                            <constraint firstItem="ryA-36-f15" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="x9h-1p-gVY"/>
-                            <constraint firstAttribute="bottom" secondItem="jPI-lT-gZH" secondAttribute="bottom" id="xGv-KD-x0f"/>
-                            <constraint firstItem="w0k-9O-GEQ" firstAttribute="height" secondItem="7A6-Py-leO" secondAttribute="height" id="y9u-Gl-e0R"/>
-                            <constraint firstItem="ryA-36-f15" firstAttribute="leading" secondItem="8vh-95-kzD" secondAttribute="trailing" constant="15" id="zFI-c0-xue"/>
-                            <constraint firstItem="MTv-q1-5FF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7A6-Py-leO" secondAttribute="leading" id="zqY-Hf-TVi"/>
+                            <constraint firstItem="g59-SQ-5w6" firstAttribute="width" secondItem="lTe-YD-EZb" secondAttribute="width" id="175-fr-lJz"/>
+                            <constraint firstItem="jPI-lT-gZH" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" id="1sp-So-fZz"/>
+                            <constraint firstAttribute="bottom" secondItem="jPI-lT-gZH" secondAttribute="bottom" id="2ME-wZ-Xj4"/>
+                            <constraint firstItem="JRB-4v-uuN" firstAttribute="width" secondItem="4ph-KB-yEh" secondAttribute="width" id="4tu-Wv-r6D"/>
+                            <constraint firstItem="4ph-KB-yEh" firstAttribute="leading" secondItem="knd-48-fkK" secondAttribute="trailing" constant="20" id="8c7-dT-IVh"/>
+                            <constraint firstItem="lTe-YD-EZb" firstAttribute="top" secondItem="6zg-02-Ied" secondAttribute="top" id="9dX-mI-uBr"/>
+                            <constraint firstItem="JRB-4v-uuN" firstAttribute="height" secondItem="kfo-Y8-BT1" secondAttribute="height" id="G7l-xH-JAO"/>
+                            <constraint firstItem="nxK-Hf-Fuw" firstAttribute="top" secondItem="lTe-YD-EZb" secondAttribute="bottom" constant="20" id="GS1-UI-9uT"/>
+                            <constraint firstItem="V5S-uH-D18" firstAttribute="leading" secondItem="g59-SQ-5w6" secondAttribute="trailing" constant="20" id="IIp-LT-Kch"/>
+                            <constraint firstItem="knd-48-fkK" firstAttribute="leading" secondItem="nxK-Hf-Fuw" secondAttribute="trailing" constant="20" id="IhX-qF-4Gj"/>
+                            <constraint firstItem="4ph-KB-yEh" firstAttribute="top" secondItem="knd-48-fkK" secondAttribute="top" id="J9k-EH-FuB"/>
+                            <constraint firstItem="JRB-4v-uuN" firstAttribute="width" secondItem="kfo-Y8-BT1" secondAttribute="width" id="JAY-wi-785"/>
+                            <constraint firstItem="lTe-YD-EZb" firstAttribute="width" secondItem="nxK-Hf-Fuw" secondAttribute="width" id="Jsn-d4-HTj"/>
+                            <constraint firstItem="g59-SQ-5w6" firstAttribute="leading" secondItem="nxK-Hf-Fuw" secondAttribute="leading" id="L5N-Ti-jt3"/>
+                            <constraint firstItem="lTe-YD-EZb" firstAttribute="top" secondItem="g59-SQ-5w6" secondAttribute="bottom" constant="20" id="LW0-cg-mGQ"/>
+                            <constraint firstItem="g59-SQ-5w6" firstAttribute="top" secondItem="V5S-uH-D18" secondAttribute="top" id="MdH-kC-524"/>
+                            <constraint firstItem="JRB-4v-uuN" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="OIo-3y-o7F"/>
+                            <constraint firstItem="4ph-KB-yEh" firstAttribute="width" secondItem="knd-48-fkK" secondAttribute="width" id="Oaa-kz-CJP"/>
+                            <constraint firstItem="JRB-4v-uuN" firstAttribute="leading" secondItem="kfo-Y8-BT1" secondAttribute="leading" id="Pgc-C8-CZe"/>
+                            <constraint firstItem="jPI-lT-gZH" firstAttribute="top" secondItem="Mbk-65-2z3" secondAttribute="bottom" constant="25" id="Q2Q-Wj-bqy"/>
+                            <constraint firstItem="g59-SQ-5w6" firstAttribute="height" secondItem="lTe-YD-EZb" secondAttribute="height" id="QJx-yy-5fC"/>
+                            <constraint firstItem="knd-48-fkK" firstAttribute="height" secondItem="6zg-02-Ied" secondAttribute="height" id="Uq0-QZ-Pss"/>
+                            <constraint firstItem="JRB-4v-uuN" firstAttribute="height" secondItem="4ph-KB-yEh" secondAttribute="height" id="VJM-6b-1zE"/>
+                            <constraint firstItem="V5S-uH-D18" firstAttribute="leading" secondItem="6zg-02-Ied" secondAttribute="leading" id="Xm4-Si-OyQ"/>
+                            <constraint firstItem="6zg-02-Ied" firstAttribute="leading" secondItem="lTe-YD-EZb" secondAttribute="trailing" constant="20" id="Y22-Du-8bt"/>
+                            <constraint firstItem="4ph-KB-yEh" firstAttribute="top" secondItem="nxK-Hf-Fuw" secondAttribute="top" id="YsC-bh-wWZ"/>
+                            <constraint firstItem="lTe-YD-EZb" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Z45-gW-sg2"/>
+                            <constraint firstItem="JRB-4v-uuN" firstAttribute="top" secondItem="kfo-Y8-BT1" secondAttribute="bottom" constant="20" id="ZMI-K9-mO5"/>
+                            <constraint firstAttribute="trailing" secondItem="Mbk-65-2z3" secondAttribute="trailing" constant="400" id="Zlf-5T-zBF"/>
+                            <constraint firstItem="JRB-4v-uuN" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="134" id="cdn-Tl-BRH"/>
+                            <constraint firstItem="JRB-4v-uuN" firstAttribute="leading" secondItem="4ph-KB-yEh" secondAttribute="leading" id="dGP-Xw-XqZ"/>
+                            <constraint firstItem="4ph-KB-yEh" firstAttribute="height" secondItem="knd-48-fkK" secondAttribute="height" id="e3i-lg-cPj"/>
+                            <constraint firstItem="g59-SQ-5w6" firstAttribute="top" secondItem="kfo-Y8-BT1" secondAttribute="top" id="g2y-Ac-cXm"/>
+                            <constraint firstItem="MTv-q1-5FF" firstAttribute="top" secondItem="a3l-zK-HS6" secondAttribute="top" id="gMD-dP-11W"/>
+                            <constraint firstItem="g59-SQ-5w6" firstAttribute="width" secondItem="V5S-uH-D18" secondAttribute="width" id="gPG-qF-6wj"/>
+                            <constraint firstItem="Mbk-65-2z3" firstAttribute="leading" secondItem="QhZ-Ye-49g" secondAttribute="leading" id="h2m-qJ-B8x"/>
+                            <constraint firstItem="Mbk-65-2z3" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="32" id="hI3-p6-pyZ"/>
+                            <constraint firstItem="nxK-Hf-Fuw" firstAttribute="top" secondItem="Mbk-65-2z3" secondAttribute="bottom" constant="-49" id="hJJ-JF-ifp"/>
+                            <constraint firstItem="kfo-Y8-BT1" firstAttribute="leading" secondItem="4ph-KB-yEh" secondAttribute="leading" id="hov-IZ-B2t"/>
+                            <constraint firstItem="jPI-lT-gZH" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="hxP-Dx-FZ9"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QhZ-Ye-49g" secondAttribute="trailing" constant="20" symbolic="YES" id="i97-If-FWV"/>
+                            <constraint firstItem="Mbk-65-2z3" firstAttribute="top" secondItem="QhZ-Ye-49g" secondAttribute="bottom" constant="3" id="iG5-c4-dG8"/>
+                            <constraint firstItem="g59-SQ-5w6" firstAttribute="leading" secondItem="Mbk-65-2z3" secondAttribute="trailing" constant="12" id="icJ-3z-5Qs"/>
+                            <constraint firstItem="jPI-lT-gZH" firstAttribute="top" secondItem="knd-48-fkK" secondAttribute="bottom" constant="52" id="ipA-N9-bXz"/>
+                            <constraint firstItem="knd-48-fkK" firstAttribute="width" secondItem="6zg-02-Ied" secondAttribute="width" id="kaf-yz-AV3"/>
+                            <constraint firstItem="MTv-q1-5FF" firstAttribute="leading" secondItem="a3l-zK-HS6" secondAttribute="trailing" constant="13" id="kbI-RT-pG1"/>
+                            <constraint firstItem="4ph-KB-yEh" firstAttribute="top" secondItem="JRB-4v-uuN" secondAttribute="bottom" constant="20" id="krg-Id-Uxy"/>
+                            <constraint firstItem="g59-SQ-5w6" firstAttribute="leading" secondItem="lTe-YD-EZb" secondAttribute="leading" id="l20-mW-aNH"/>
+                            <constraint firstItem="V5S-uH-D18" firstAttribute="width" secondItem="6zg-02-Ied" secondAttribute="width" id="mil-Ru-9C5"/>
+                            <constraint firstItem="g59-SQ-5w6" firstAttribute="top" secondItem="MTv-q1-5FF" secondAttribute="bottom" constant="9" id="nvD-7B-spJ"/>
+                            <constraint firstItem="V5S-uH-D18" firstAttribute="leading" secondItem="knd-48-fkK" secondAttribute="leading" id="rpL-Hb-Z9m"/>
+                            <constraint firstItem="6zg-02-Ied" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="tYc-e9-39E"/>
+                            <constraint firstItem="V5S-uH-D18" firstAttribute="leading" secondItem="6zg-02-Ied" secondAttribute="leading" id="tvb-1M-dHC"/>
+                            <constraint firstItem="knd-48-fkK" firstAttribute="top" secondItem="6zg-02-Ied" secondAttribute="bottom" constant="20" id="wMS-zH-nnu"/>
+                            <constraint firstItem="kfo-Y8-BT1" firstAttribute="leading" secondItem="V5S-uH-D18" secondAttribute="trailing" constant="20" id="xG9-0q-1St"/>
+                            <constraint firstItem="lTe-YD-EZb" firstAttribute="height" secondItem="nxK-Hf-Fuw" secondAttribute="height" id="yFz-Pf-XmP"/>
+                            <constraint firstItem="V5S-uH-D18" firstAttribute="height" secondItem="6zg-02-Ied" secondAttribute="height" id="yMg-48-hck"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MTv-q1-5FF" secondAttribute="trailing" constant="20" symbolic="YES" id="z4u-UN-mrD"/>
+                            <constraint firstItem="Mbk-65-2z3" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="zr1-9X-SzB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="m_resController" destination="t9m-Rh-caL" id="a2R-kB-FKM"/>
-                        <outlet property="r0c0" destination="7A6-Py-leO" id="oj9-xG-miW"/>
-                        <outlet property="r0c1" destination="mGT-RX-dBH" id="Et2-X9-o9y"/>
-                        <outlet property="r0c2" destination="YgA-y3-FMu" id="jL1-Lu-0GD"/>
-                        <outlet property="r1c0" destination="w0k-9O-GEQ" id="hyp-6d-qy7"/>
-                        <outlet property="r1c1" destination="8vh-95-kzD" id="3Tf-qn-ixG"/>
-                        <outlet property="r1c2" destination="ryA-36-f15" id="0SR-yA-bDY"/>
-                        <outlet property="r2c0" destination="sbs-Za-f2J" id="76P-tR-7Os"/>
-                        <outlet property="r2c1" destination="xaG-Nn-DMD" id="Umf-vG-sb1"/>
-                        <outlet property="r2c2" destination="d59-N9-L6v" id="QvL-P4-DW5"/>
+                        <outlet property="r0c0" destination="g59-SQ-5w6" id="aN6-JM-vvw"/>
+                        <outlet property="r0c1" destination="V5S-uH-D18" id="DaH-4V-1fM"/>
+                        <outlet property="r0c2" destination="kfo-Y8-BT1" id="IYS-5Z-EYV"/>
+                        <outlet property="r1c0" destination="lTe-YD-EZb" id="rIO-Kq-CHi"/>
+                        <outlet property="r1c1" destination="6zg-02-Ied" id="PKh-bP-OuS"/>
+                        <outlet property="r1c2" destination="JRB-4v-uuN" id="RI9-NU-ZOU"/>
+                        <outlet property="r2c0" destination="nxK-Hf-Fuw" id="FGo-kb-OfU"/>
+                        <outlet property="r2c1" destination="knd-48-fkK" id="BkT-JZ-yIA"/>
+                        <outlet property="r2c2" destination="4ph-KB-yEh" id="zhu-IC-LRo"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1100,7 +1097,7 @@
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="225" y="994.5"/>
+            <point key="canvasLocation" x="292.5" y="958"/>
         </scene>
     </scenes>
 </document>
